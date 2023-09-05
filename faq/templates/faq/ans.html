@@ -1,0 +1,19 @@
+{% extends 'faq/layout.html' %}
+{% block content %}
+<div class="titulo">
+  <h1>Respuestas</h1>
+</div>
+<br>
+<h2>Pregunta: "{{ pregunta.text }}"</h2>
+<br>
+<ul>
+  {% for respuesta in respuestas %}
+    <hr>
+    <div class="q">
+        <a>{{ respuesta.text }}</a>
+    </div>
+  {% endfor %}
+</ul>
+    <hr>
+    <br>
+{% endblock %}

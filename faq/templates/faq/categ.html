@@ -1,0 +1,17 @@
+{% extends 'faq/layout.html' %}
+
+{% block content %}
+<div class="titulo">
+  <h1>Categorías</h1>
+</div>
+<br>
+<ul>
+  {% for categ in categs %}
+    <hr>
+    <div class="q">
+        <a href="{% url 'faq:preguntas' categ.id %}">{{ categ.text }}</a>
+    </div>
+  {% endfor %}
+</ul>
+<hr>
+{% endblock %}

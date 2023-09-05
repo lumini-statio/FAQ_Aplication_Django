@@ -1,0 +1,17 @@
+{% extends 'faq/layout.html' %}
+{% block content %}
+  <h2>Todas las preguntas</h2>
+  <ul>
+    {% for pregunta in preguntas %}
+    <br>
+    <hr>
+    <br>
+    <li>{{ pregunta.text }}</li>
+    {% empty %}
+      <li>No hay preguntas disponibles.</li>
+    {% endfor %}
+  </ul>
+<br>
+    <hr>
+    <br>
+{% endblock %}
